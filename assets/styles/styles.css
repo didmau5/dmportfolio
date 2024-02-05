@@ -1,0 +1,226 @@
+
+
+
+/* Header */
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+  padding-top: 70px;
+}
+
+.navbar{
+	background-color:white;
+	opacity:0.5;
+	border:none;
+	padding-top:20px;
+	padding-bottom:10px;
+	border-radius:0;
+}
+
+.nav-item>a{
+	color:grey;
+	background-color:white;
+	border:none;
+	font-weight: bold;
+	font-size: medium;
+}
+
+.navbar .active>a{
+	background-color:green !important;
+	color:white !important;
+	transition:0.25s;
+}
+/*	End Header	*/
+
+body{
+	position:relative;
+}
+
+.jumbotron{
+  background: url("../images/jay-mantri-unsplash.jpg") top left;
+  background-size: cover;
+  height:100vh;
+  margin-bottom:0;
+}
+
+#about, #portfolio, #contact{
+	font-size:1.5rem;
+	font-family:monospace;
+}
+
+#tagline-container{
+	text-align: center;
+	font-family:monospace;
+	margin-top:15%;
+	margin-bottom:15%;
+}
+
+#action-container{
+	text-align:center;
+	margin-top:15px;
+	margin-bottom:50px;
+}
+
+
+
+#action-container .btn{
+	width:140px;
+	border-radius:23pt;
+}
+
+.img-responsive{
+	width:200px;
+	border-radius: 50%;
+	margin: 15px auto;
+	float:inline-end;
+}
+
+
+/*	Portfolio Card Grid	*/
+.section-sub-header{
+	font-family:Roboto Slab;
+	font-weight: 400;
+	font-size:19.5px;
+    line-height: 1;
+    color: #777;
+}
+
+.card-container{
+	margin-bottom:50px;
+}
+
+.card {
+	display:inline-block;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+	width:250px;
+	margin:10px;
+	font-family:Roboto Slab;
+	
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.card h4{
+	color:black;
+}
+
+.card p{
+	color:grey;
+}
+
+.card:hover{
+	color:black;
+	text-decoration:none;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.img-card {
+    border-radius: 5px 5px 0 0;
+	width: 100%;
+	height:180px;
+}
+/*	End Portfolio Card Grid	*/
+
+
+
+/*	Footer	*/
+.footer{
+	height:100px;
+}
+
+.footer .container{
+	height:100%;
+}
+
+.footer .container a{
+	float:right;
+}
+
+.footer .container .fa {
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 30px 3px 3px 3px;
+  border-radius: 50%;
+  width:56px;
+}
+/*
+.fa:hover{
+	color:#102542;
+}
+*/
+.fa-facebook {
+  background: white;
+  color: green;
+}
+.fa-facebook:hover {
+  background: #3B5998;
+  color: white;
+  transition:0.25s;
+}
+
+.fa-twitter {
+  background: white;
+  color: green;
+}
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+  transition:0.25s;
+}
+
+.fa-linkedin {
+  background: white;
+  color: green;
+}
+.fa-linkedin:hover {
+  background: #007bb5;
+  color: white;
+  transition:0.25s;
+}
+
+.fa-instagram {
+  background: white;
+  color: green;
+}
+.fa-instagram:hover {
+  background: #125688;
+  color: white;
+  transition:0.25s;
+}
+
+.fa-pinterest {
+  background: white;
+  color: green;
+}
+.fa-pinterest:hover {
+  background: #cb2027;
+  color: white;
+  transition:0.25s;
+}
+
+.dev-tagline{
+	float: left;
+}
+
+.dev-tagline a{
+	text-decoration:none;
+	color:white;
+	font-family:Roboto Slab;
+	font-size: smaller;
+}
+.dev-tagline a:hover{
+	text-decoration:none;
+	color:white;
+}
+/*	End Footer	*/
