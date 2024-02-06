@@ -25,8 +25,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="80">
 	<div class="container">
 		<div id="tagline-container" class="container">
-		  <h2>Daniel Mow</h2>
-	  	<h2>Software Engineering and Management</h2>      
+		  <span id="AboutDevTypeText" class="typeing"></span><span class='blinker'>&#32;</span>    
 		  <p></p>
 		</div>
 	</div>
@@ -34,7 +33,7 @@
 		<div id="about" class="container">
 		<img class="img-responsive img-circle" src="assets/images/headshot.jpg"></img>
 		<p>I am a Software Engineer based out of Victoria BC with 10 years of experience in both Software Development and Management.</p>
-		<p><a href="Resume.html">Resume</a></p>
+		<p><a href="assets/pdf/resume.pdf">Resume</a></p>
 		<p><a href="https://www.linkedin.com/in/daniel-mow-95646773/">Linked In</a></p>
 		<p><a href="https://github.com/didmau5">Github</a></p>
 		<p><a href="mailto: mow.daniel@gmail.com">Email Me</a></p>
@@ -48,5 +47,35 @@
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	var data = [
+  {
+    AboutDevTypeText: "<h2>Daniel Mow</h2><h2>Software Engineering and Management</h2>"
+  }
+];
+
+var allElements = document.getElementsByClassName("typeing");
+for (var j = 0; j < allElements.length; j++) {
+  var currentElementId = allElements[j].id;
+  var currentElementIdContent = data[0][currentElementId];
+  var element = document.getElementById(currentElementId);
+  var devTypeText = currentElementIdContent;
+
+  // type code
+  var i = 0, isTag, text;
+  (function type() {
+    text = devTypeText.slice(0, ++i);
+    if (text === devTypeText) return;
+    element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+    var char = text.slice(-1);
+    if (char === "<") isTag = true;
+    if (char === ">") isTag = false;
+    if (isTag) return type();
+    setTimeout(type, 60);
+  })();
+}
+
+
+  </script>
 </body>
 </html>
